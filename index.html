@@ -6,77 +6,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
       color: #333;
     }
-    h1 {
-      color: #007acc;
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
     }
-    .section {
+
+    h1 {
+      text-align: center;
+      color: #007acc;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1em;
       margin-bottom: 40px;
     }
+
+    .section {
+      background: #ffffffdd;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
     a.button {
       display: inline-block;
-      margin: 10px 0;
-      padding: 10px 15px;
-      background-color: #007acc;
+      margin: 8px 0;
+      padding: 10px 18px;
+      background: linear-gradient(135deg, #007acc, #005f99);
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
     }
+
     a.button:hover {
-      background-color: #005f99;
+      background: linear-gradient(135deg, #005f99, #004f80);
+      transform: translateY(-2px);
     }
+
     footer {
-      margin-top: 60px;
       text-align: center;
+      padding: 20px;
       font-size: 0.9em;
-      color: #777;
+      color: #555;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Tech & App Hub</h1>
-  <p> Andriod apps, windows and linux tools, and tech support.</p>
+  <div class="container">
+    <h1>Tech & App Hub</h1>
+    <p class="subtitle">Android apps, Windows & Linux tools, and tech support.</p>
 
-  <div class="section">
-    <h2>📱 Downloads</h2>
-    <p>Grab the latest versions of my tools below:</p>
-    <ul>
-      <li><a href="MyApp.apk" class="button" download>🧹 Junk Cleaner App (Android) (TBA)</a></li>
-      <li><a href="PasswordGen.py" class="button" download>🔐 Password Generator (Windows/Linux)</a></li>
-      <li><a href="BetterCalc.apk" class="button" download>🧮 Better Calculator (Android) (TBA)</a></li>
-    </ul>
+    <div class="section">
+      <h2>📱 Downloads</h2>
+      <p>Grab the latest versions of my tools below:</p>
+      <ul>
+        <li><a href="MyApp.apk" class="button" download>🧹 Junk Cleaner App (Android) (TBA)</a></li>
+        <li><a href="PasswordGen.py" class="button" download>🔐 Password Generator (Windows/Linux)</a></li>
+        <li><a href="BetterCalc.apk" class="button" download>🧮 Better Calculator (Android) (TBA)</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🛠️ Tech Support</h2>
+      <p>Having issues with apps, computers, or just trying to find a new PC? Or need a server? Contact me below:</p>
+      <ul>
+        <li>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></li>
+        <li>Phone: <a href="tel:+12089225401">(208) 922-5401</a></li>
+        <li><a href="https://www.ebay.com/usr/nolu_5745" target="_blank" class="button">Visit My eBay Store 🛒</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>💬 Stay Connected</h2>
+      <p>Follow updates or support my work:</p>
+      <ul>
+        <li><a href="https://github.com/noble3212" target="_blank">GitHub Profile</a></li>
+        <li><a href="https://www.paypal.me/noblecorp22" target="_blank">Donate via PayPal 💸</a></li>
+      <script>
+  function copyWallet() {
+    const text = document.getElementById("walletText").textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Wallet address copied to clipboard!");
+    }).catch(err => {
+      alert("Failed to copy wallet address.");
+    });
+  }
+</script>
+<li>
+  Really long wallet address
+      <li>
+  Wallet: 
+  <span id="walletText">49ZJebiZedYc1my1zNfD3MbNroKdAAyUGH2rV8TEJofgXwxbvPLzBgwaViD7jXe8tF5xrfMoXfY6Z3CJH8RtDShcRtPkVtX</span>
+  <button onclick="copyWallet()" style="margin-left: 10px; padding: 5px 10px; font-size: 0.9em; border: none; border-radius: 5px; background-color: #007acc; color: white; cursor: pointer;">Copy</button>
+</li>
+
+
+    <footer>
+      <p>&copy; 2025 Noble — All rights reserved.</p>
+    </footer>
   </div>
-
-  <div class="section">
-    <h2>🛠️ Tech Support</h2>
-    <p>Having issues with an app computers or just trying to find a new pc. Or need a server? Contact me below:</p>
-    <ul>
-      <li>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></li>
-      <li>Phone: <a href="tel:+12089225401">(208) 922-5401</a></li>
-      <li><a href="https://www.ebay.com/usr/nolu_5745" target="_blank" class="button">Visit My eBay Store 🛒</a></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>💬 Stay Connected</h2>
-    <p>Follow updates or support my work:</p>
-    <ul>
-      <li><a href="https://github.com/noble3212" target="_blank">GitHub Profile</a></li>
-      <li><a href="https://www.paypal.me/noblecorp22" target="_blank">Donate via PayPal 💸</a></li>
-      <li>Wallet: 49ZJebiZedYc1my1zNfD3MbNroKdAAyUGH2rV8TEJofgXwxbvPLzBgwaViD7jXe8tF5xrfMoXfY6Z3CJH8RtDShcRtPkVtX</li>
-    </ul>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Noble — All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
