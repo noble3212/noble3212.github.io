@@ -53,18 +53,23 @@
       margin-bottom: 10px;
     }
 
-    a.button {
+    a.button,
+    .wallet-button {
       display: inline-block;
       margin: 8px 0;
       padding: 10px 18px;
       background: linear-gradient(135deg, #007acc, #005f99);
       color: white;
       text-decoration: none;
+      border: none;
       border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    a.button:hover {
+    a.button:hover,
+    .wallet-button:hover {
       background: linear-gradient(135deg, #005f99, #004f80);
       transform: translateY(-2px);
     }
@@ -75,6 +80,11 @@
       font-size: 0.9em;
       color: #555;
       margin-top: 40px;
+    }
+
+    /* Hide the wallet address element */
+    #walletText {
+      display: none;
     }
   </style>
 </head>
@@ -98,7 +108,7 @@
       <h2>🛠️ Tech Support</h2>
       <p>Having issues with apps, computers, or just trying to find a new PC? Or need a server? Contact me below:</p>
       <ul>
-        <li>Email: <a href="nobletechcontact2@gmail.com">nobletechcontact2@gmail.com</a></li>
+        <li>Email: <a href="mailto:nobletechcontact2@gmail.com">nobletechcontact2@gmail.com</a></li>
         <li>Phone: <a href="tel:+12089225401">(208) 922-5401</a></li>
         <li><a href="https://www.ebay.com/usr/nolu_5745" target="_blank" class="button">Visit My eBay Store 🛒</a></li>
       </ul>
@@ -110,42 +120,33 @@
       <ul>
         <li><a href="https://github.com/noble3212" target="_blank">GitHub Profile</a></li>
         <li><a href="https://www.paypal.me/noblecorp22" target="_blank">Donate via PayPal 💸</a></li>
-      <script>
-  function copyWallet() {
-    const text = document.getElementById("walletText").textContent;
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Wallet address copied to clipboard!");
-    }).catch(err => {
-      alert("Failed to copy wallet address.");
-    });
-  }
-</script>
-     <li>
-  <button onclick="copyWallet()" style="padding: 10px 15px; font-size: 1em; border: none; border-radius: 5px; background-color: #007acc; color: white; cursor: pointer;">
-    Copy Wallet Address 🔗
-  </button>
-  <span id="walletText" style="display: none;">
-    49ZJebiZedYc1my1zNfD3MbNroKdAAyUGH2rV8TEJofgXwxbvPLzBgwaViD7jXe8tF5xrfMoXfY6Z3CJH8RtDShcRtPkVtX
-  </span>
-</li>
-
-<script>
-  function copyWallet() {
-    const text = document.getElementById("walletText").textContent;
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Wallet address copied to clipboard!");
-    }).catch(err => {
-      alert("Failed to copy wallet address.");
-    });
-  }
-</script>
-
-
+        <li>
+          <button class="wallet-button" onclick="copyWallet()">Copy Wallet Address 🔗</button>
+          <span id="walletText">49ZJebiZedYc1my1zNfD3MbNroKdAAyUGH2rV8TEJofgXwxbvPLzBgwaViD7jXe8tF5xrfMoXfY6Z3CJH8RtDShcRtPkVtX</span>
+        </li>
+      </ul>
+    </div>
 
     <footer>
       <p>&copy; 2025 Noble — All rights reserved.</p>
     </footer>
   </div>
 
+  <script>
+    function copyWallet() {
+      const text = document.getElementById("walletText").textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Wallet address copied to clipboard!");
+      }).catch(err => {
+        alert("Failed to copy wallet address.");
+      });
+    }
+  </script>
+
 </body>
 </html>
+
+
+</body>
+</html>
+
